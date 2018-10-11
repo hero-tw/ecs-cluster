@@ -1,0 +1,21 @@
+[
+  {
+    "essential": true,
+    "name": "${def_name}",
+    "image": "${def_image}",
+    "cpu": 512,
+    "memory": 4096,
+    "portMappings": [ { "hostPort": 8081, "containerPort": 8081 }],
+    "environment": [
+      { "name": "api", "value": "$api" }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-region": "${def_region}",
+        "awslogs-group": "${def_log_group}",
+        "awslogs-stream-prefix": "${def_log_prefix}"
+      }
+    }
+  }
+]
