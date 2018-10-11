@@ -11,12 +11,12 @@ module "ecs_cluster" {
 module "api" {
   source = "./api"
 
-  service_name = "api"
+  service_name = "config-demo"
 
   cluster_name = "${module.ecs_cluster.cluster}"
 
   tags = {
-    Name   = "api"
+    Name   = "config-demo"
     Domain = "${var.domain}"
   }
 
