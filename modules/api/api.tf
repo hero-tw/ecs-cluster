@@ -14,7 +14,7 @@ module "ecs_service" {
   tags                      = "${var.tags}"
   cluster_role_arn          = "${var.role_arn}"
   container_def             = "${data.template_file.def.rendered}"
-  service_name              = "${var.service_name}-service"
+  service_name              = "${var.service_name}"
   private_subnets           = "${var.private_subnets}"
   autoscaling_initial_count = "${var.autoscaling_initial_count}"
   autoscaling_min_capacity  = "${var.autoscaling_min_capacity}"

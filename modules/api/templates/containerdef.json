@@ -5,9 +5,9 @@
     "image": "${def_image}",
     "cpu": 512,
     "memory": 4096,
-    "portMappings": [ { "hostPort": 8081, "containerPort": 8081 }],
+    "portMappings": [ { "hostPort": 8080, "containerPort": 8080 }],
     "environment": [
-      { "name": "api", "value": "$api" }
+      { "name": "env", "value": "${env_environment_name}" }
     ],
     "logConfiguration": {
       "logDriver": "awslogs",
