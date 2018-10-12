@@ -8,13 +8,13 @@ module "ecs_service" {
   cluster_name              = "${var.role_arn}"
   public_subnets            = "${var.public_subnets}"
   internal_security_group   = ["${var.internal_security_group}"]
-  port                      = "8081"
+  port                      = "8080"
   public_security_group     = "${var.public_security_group}"
   domain                    = "${var.domain}"
   tags                      = "${var.tags}"
   cluster_role_arn          = "${var.role_arn}"
   container_def             = "${data.template_file.def.rendered}"
-  service_name              = "${var.service_name}"
+  service_name              = "${var.service_name}-service"
   private_subnets           = "${var.private_subnets}"
   autoscaling_initial_count = "${var.autoscaling_initial_count}"
   autoscaling_min_capacity  = "${var.autoscaling_min_capacity}"
@@ -26,7 +26,7 @@ module "ecs_service" {
     timeout             = "10"
     protocol            = "HTTPS"
     interval            = 30
-    path                = "/ping"
+    path                = "/"
   }
 }
 
