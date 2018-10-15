@@ -21,12 +21,12 @@ module "ecs_service" {
   autoscaling_max_capacity  = "${var.autoscaling_max_capacity}"
 
   health_check = {
-    healthy_threshold   = 2
-    unhealthy_threshold = 2
-    timeout             = "10"
-    protocol            = "HTTPS"
-    interval            = 30
-    path                = "/"
+//    healthy_threshold   = 2
+//    unhealthy_threshold = 2
+//    timeout             = "10"
+    protocol            = "HTTP"
+//    interval            = 30
+//    path                = "/"
   }
 }
 
