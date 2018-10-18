@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := plan
 
-PROJECT=ecs-cluster-hero
+PROJECT=hero
 REGION=us-east-1
 AWS_PROFILE=default
 
